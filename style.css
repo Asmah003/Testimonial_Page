@@ -14,12 +14,14 @@ body {
   gap: 80px;
 }
 .container {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(6, 1fr) 20vh;
   gap: 30px;
-  margin: 30px;
-  overflow: hidden;
+  /* margin: 50px; */
+  padding: 50px;
+  overflow: hidden!important;
 }
 header {
   text-align: center;
@@ -35,8 +37,8 @@ header P {
 }
 .card {
   position: relative;
-  border-top: 10px solid transparent;
-  border-left: 10px solid transparent;
+  border-top: 6px solid transparent;
+  border-left: 6px solid transparent;
   background: linear-gradient(white, white) padding-box,
     linear-gradient(
         135deg,
@@ -119,6 +121,35 @@ img {
   justify-content: space-between;
   padding: 40px;
 }
+@media (max-width: 1024px) {
+  .container{
+    width: auto;
+}
+.container {
+    grid-template-columns: 1fr;
+  }
+  .div1 {
+    grid-column: span 1;
+  }
+  .div2 {
+    grid-column: span 1;
+  }
+  .div3 {
+    grid-column: span 1;
+  }
+  .div4 {
+    grid-column: span 1;
+  }
+  .div5 {
+    grid-column: span 1;
+  }
+  .div6 {
+    grid-column: span 1;
+  }
+  .div7 {
+    grid-column: span 1;
+  }
+}
 @media (max-width: 768px) {
   .container {
     grid-template-columns: 1fr;
@@ -147,6 +178,19 @@ img {
 }
 @media (max-width: 375px) {
   .Champs1 {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .img_card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+@media (max-width: 425px) {
+ .container{
+  margin: 0;
+ } 
+ .Champs1 {
     flex-direction: column;
     padding: 20px;
   }
